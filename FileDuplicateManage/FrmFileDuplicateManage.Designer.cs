@@ -226,7 +226,7 @@
             this.BtnConditionAdd.Name = "BtnConditionAdd";
             this.BtnConditionAdd.Size = new System.Drawing.Size(103, 23);
             this.BtnConditionAdd.TabIndex = 20;
-            this.BtnConditionAdd.Text = "추가";
+            this.BtnConditionAdd.Text = "조건 추가";
             this.BtnConditionAdd.UseVisualStyleBackColor = true;
             this.BtnConditionAdd.Click += new System.EventHandler(this.BtnConditionAdd_Click);
             // 
