@@ -1,0 +1,3 @@
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\Debug\FileDuplicateManage.exe.config
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\Debug\FileDuplicateManage.exe.config
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\Debug\FileDuplicateManage.csproj.ResolveComReference.cache

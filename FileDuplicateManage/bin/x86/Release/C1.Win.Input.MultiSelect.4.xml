@@ -1,0 +1,1501 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.Win.Input.MultiSelect.4</name>
+  </assembly>
+  <members>
+    <member name="T:C1.Win.Input.C1CheckListItem">
+      <summary>
+            Represents an item of a <see cref="T:C1.Win.Input.C1CheckList" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItem.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.C1CheckListItem" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItem.#ctor(System.Object)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.C1CheckListItem" /> class.
+            </summary>
+      <param name="value">The value of the new item.</param>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItem.Enabled">
+      <summary>
+            Gets or sets a value indicating whether this item is enabled.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItem.Selected">
+      <summary>
+            Gets or sets a value indicating whether the item is in the selected state.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItem.Value">
+      <summary>
+            Gets or sets the value of the item.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.C1MultiSelect">
+      <summary>
+            A tag editor-based control with check list as drop-down.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.C1MultiSelect" /> control.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.C1MultiSelect.SelectionChanged">
+      <summary>
+            Occurs when the selected state of item was changed.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.C1MultiSelect.StylesChanged">
+      <summary>
+            Occurs when theme or some style has changed.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.Styles">
+      <summary>
+            Gets or sets styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.AutoCompleteMode">
+      <summary>
+            Gets or sets an option that controls how automatic completion works for the <see cref="T:C1.Win.Input.C1MultiSelect" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.AutoSuggestMode">
+      <summary>
+            Gets or sets an option that controls how candidates searching works in auto-suggest mode.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.BorderColor">
+      <summary>
+            Gets or sets the color of the control border.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.BorderStyle">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.Input.C1MultiSelect.BorderStyle" /> value determining the type of border around the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.BindingInfo">
+      <summary>
+            Contains information about data binding.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.DisplayMode">
+      <summary>
+            Gets or sets a value indicates whether to show tag mode or text mode.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.DropDownHeight">
+      <summary>
+            Gets or sets the height in pixels of the drop-down portion of the <see cref="T:C1.Win.Input.C1MultiSelect" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.DropDownWidth">
+      <summary>
+            Gets or sets the width in pixels of the drop-down portion of the <see cref="T:C1.Win.Input.C1MultiSelect" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.DroppedDown">
+      <summary>
+            Gets or sets a value indicating whether the <see cref="T:C1.Win.Input.C1MultiSelect" /> is displaying its drop-down portion.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.HeaderFormat">
+      <summary>
+            Gets or sets the format string used to create the header content when the control has more than <see cref="P:C1.Win.Input.C1MultiSelect.MaxHeaderItems" /> items selected.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.IsHeaderFormatVisible">
+      <summary>
+            Gets a value that indicates whether header format is shown.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.Items">
+      <summary>
+            Returns the collection of the <see cref="T:C1.Win.Input.C1CheckListItem" /> objects which are shown in drop-down part.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.MaxHeaderItems">
+      <summary>
+            Gets or sets the maximum number of items to display on the control header.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.Placeholder">
+      <summary>
+            Gets or sets the string shown as a hint when the control is empty.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.SelectedIndex">
+      <summary>
+            Gets or sets the index of the currently selected item in the drop-down list.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.SelectAllCaption">
+      <summary>
+            Gets or sets the caption for Select All checkbox.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.SelectedItem">
+      <summary>
+            Gets or sets the item that is currently selected in the drop-down list.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.SelectedItems">
+      <summary>
+            Gets the collection of selected items in the drop-down <see cref="T:C1.Win.Input.C1CheckList" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.SelectionMode">
+      <summary>
+            Gets or sets a value indicating selection mode.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.Separator">
+      <summary>
+            Defines a separator string to separate items in text mode.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.ShowCheckBoxes">
+      <summary>
+            Gets or sets a value indicating whether check boxes should be visible or not.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.ShowDropDownButton">
+      <summary>
+            Gets or sets a value indicates whether to show drop-down button.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.ShowRemoveButton">
+      <summary>
+            Gets or sets a value indicates whether to show remove button in each tag.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.ShowSelectAll">
+      <summary>
+            Gets or sets a value that indicates whether to show select all checkbox or not.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.UnselectAllCaption">
+      <summary>
+            Gets or sets the caption for Unselect All checkbox.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1MultiSelect.TagWrap">
+      <summary>
+            Indicates whether a tag editor control automatically wraps tags to the beginning of the next line when necessary.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.SelectAll">
+      <summary>
+            Selects all items of the current <see cref="T:C1.Win.Input.C1MultiSelect" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.UnselectAll">
+      <summary>
+            Cancel the selection of all items of the current <see cref="T:C1.Win.Input.C1MultiSelect" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.Dispose(System.Boolean)">
+      <summary>
+            Releases the unmanaged resources used by the <see cref="T:C1.Win.Input.C1MultiSelect" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.OnEnabledChanged(System.EventArgs)">
+      <summary>
+            Rises the EnabledChanged event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.OnRightToLeftChanged(System.EventArgs)">
+      <summary>
+            Rises the RightToLeftChanged event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.OnSelectionChanged(System.EventArgs)">
+      <summary>
+            Rises the SelectionChanged event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.OnStylesChanged(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Input.C1MultiSelect.StylesChanged" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+      <summary>
+            Rises the KeyDown event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1MultiSelect.OnFontChanged(System.EventArgs)">
+      <summary>
+             Raises the System.Windows.Forms.Control.FontChanged event.
+            </summary>
+      <param name="e">An System.EventArgs that contains the event data.</param>
+    </member>
+    <member name="T:C1.Win.Input.C1CheckList">
+      <summary>
+            A list-based control with optional check boxes for each item, different selection modes and ability to select/unselect all items.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckList.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.C1CheckList" /> class.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.BindingInfo">
+      <summary>
+            Contains information about a data binding.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.BorderColor">
+      <summary>
+            Gets or sets the color of the control border.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.BorderStyle">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.Input.C1CheckList.BorderStyle" /> value determining the type of border around the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.Items">
+      <summary>
+            Gets the collection of items in this <see cref="T:C1.Win.Input.C1CheckList" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.SelectAllCaption">
+      <summary>
+            Get or set the caption for Select All checkbox.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.SelectedIndex">
+      <summary>
+            Gets or sets the index of the currently selected item in the list.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.SelectedItem">
+      <summary>
+            Gets or sets the item that is currently selected in the list.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.SelectedItems">
+      <summary>
+            Gets the collection of selected items in this <see cref="T:C1.Win.Input.C1CheckList" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.SelectionMode">
+      <summary>
+            Gets or sets a value indicating selection method for items of this <see cref="T:C1.Win.Input.C1CheckList" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.ShowCheckBoxes">
+      <summary>
+            Gets or sets a value indicating whether check boxes should be visible or not.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.ShowSelectAll">
+      <summary>
+            Gets or sets a value that indicates whether show select all checkbox or not.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.Styles">
+      <summary>
+            Gets or sets styles.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckList.ShouldSerializeStyles">
+      <summary>
+            Returns true if this Styles property has changed; otherwise, returns false.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckList.ResetStyles">
+      <summary>
+            Resets the Styles property to its default value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckList.UnselectAllCaption">
+      <summary>
+            Get or set the caption for Unselect All checkbox.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.C1CheckList.SelectionChanged">
+      <summary>
+            Occurs when the selected state of item was changed.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.C1CheckList.ApplyItemStyles">
+      <summary>
+            Occurs before applying styles to a list item.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckList.SelectAll">
+      <summary>
+            Selects all items of the current <see cref="T:C1.Win.Input.C1CheckList" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckList.UnselectAll">
+      <summary>
+            Cancel the selection of all items of the current <see cref="T:C1.Win.Input.C1CheckList" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckList.OnSelectionChanged(System.EventArgs)">
+      <summary>
+            Fires the SelectionChanged event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckList.OnApplyItemStyles(C1.Win.Input.C1CheckListItemStylesEventArgs)">
+      <summary>
+            Fires the ApplyItemStyles event.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.C1TagEditor">
+      <summary>
+            A text box-based control with ability to display and edit tags.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1TagEditor.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.C1TagEditor" /> class.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.C1TagEditor.StylesChanged">
+      <summary>
+            Occurs when theme or some style has changed.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1TagEditor.OnStylesChanged(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Input.C1TagEditor.StylesChanged" /> event.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.Styles">
+      <summary>
+            Gets or sets styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.BorderColor">
+      <summary>
+            Gets or sets the color of the control border.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.BorderStyle">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.Input.C1TagEditor.BorderStyle" /> value determining the type of border around the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.DisplayMode">
+      <summary>
+            Gets or sets a value indicates whether to show tag mode or text mode.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.Placeholder">
+      <summary>
+            Gets or sets the string shown as a hint when the control is empty.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.Separator">
+      <summary>
+            Defines a separator string to separate items in text mode.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.ShowRemoveButton">
+      <summary>
+            Gets or sets a value indicates whether to show remove button in each tag.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.Tags">
+      <summary>
+            Gets the collection of tags in this <see cref="T:C1.Win.Input.C1TagEditor" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.TagWrap">
+      <summary>
+            Indicates whether a tag editor control automatically wraps tags to the beginning of the next line when necessary.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1TagEditor.BindingInfo">
+      <summary>
+            Contains information about data binding.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1TagEditor.OnRightToLeftChanged(System.EventArgs)">
+      <summary>
+            Fires the RightToLeftChanged event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1TagEditor.OnFontChanged(System.EventArgs)">
+      <summary>
+             Raises the System.Windows.Forms.Control.FontChanged event.
+            </summary>
+      <param name="e">An System.EventArgs that contains the event data.</param>
+    </member>
+    <member name="T:C1.Win.Input.CheckListBindingInfo">
+      <summary>
+            Contains information about a data binding.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListBindingInfo.DataSource">
+      <summary>
+            Gets or sets the object used as the data source for the current <see cref="T:C1.Win.Input.C1CheckList" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListBindingInfo.DataMember">
+      <summary>
+            Gets or sets a name of a specific record set within the DataSource.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListBindingInfo.CheckedMemberPath">
+      <summary>
+            Gets or sets the name of the property used to control the check boxes placed next to each item.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListBindingInfo.DisabledMemberPath">
+      <summary>
+            Gets or sets the name of the property used to control the enable or disable status to each item.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListBindingInfo.DisplayMemberPath">
+      <summary>
+            Gets or sets a path to a value on the source object to serve as the visual representation of the object.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.CheckListBindingInfo.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.CheckListBindingInfo.OnPropertyChanged(System.String)">
+      <summary>
+            Fires the PropertyChanged event.
+            </summary>
+      <param name="propertyName">
+      </param>
+    </member>
+    <member name="T:C1.Win.Input.MultiSelectBindingInfo">
+      <summary>
+            Contains information about data source and other data binding options.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.MultiSelectBindingInfo.TagsDataSource">
+      <summary>
+            Gets or sets the object used as the data source for the tags of <see cref="T:C1.Win.Input.C1MultiSelect" /> control.
+            </summary>
+      <remarks>This property is optional.</remarks>
+    </member>
+    <member name="P:C1.Win.Input.MultiSelectBindingInfo.TagsMemberPath">
+      <summary>
+            Gets or sets a path to a value on the source object for the tags of <see cref="T:C1.Win.Input.C1MultiSelect" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.MultiSelectBindingInfo.DataSource">
+      <summary>
+            Gets or sets the object used as the data source for the drop-down part of <see cref="T:C1.Win.Input.C1MultiSelect" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.MultiSelectBindingInfo.DataMember">
+      <summary>
+            Gets or sets a name of a specific record set within the DataSource.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.MultiSelectBindingInfo.CheckedMemberPath">
+      <summary>
+            Gets or sets the name of the property used to control the check boxes placed next to each item.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.MultiSelectBindingInfo.DisabledMemberPath">
+      <summary>
+            Gets or sets the name of the property used to control the enable or disable status to each item.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.MultiSelectBindingInfo.DisplayMemberPath">
+      <summary>
+            Gets or sets a path to a value on the source object to serve as the visual representation of the object.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.MultiSelectBindingInfo.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.MultiSelectBindingInfo.OnPropertyChanged(System.String)">
+      <summary>
+            Fires the PropertyChanged event.
+            </summary>
+      <param name="propertyName">
+      </param>
+    </member>
+    <member name="T:C1.Win.Input.TagEditorBindingInfo">
+      <summary>
+            Contains information about a data binding.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.TagEditorBindingInfo.DataSource">
+      <summary>
+            Gets or sets the object used as the data source for the current <see cref="T:C1.Win.Input.C1TagEditor" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.TagEditorBindingInfo.DisplayMemberPath">
+      <summary>
+            Gets or sets a path to display value on the source object.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.TagEditorBindingInfo.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.TagEditorBindingInfo.OnPropertyChanged(System.String)">
+      <summary>
+            Fires the PropertyChanged event.
+            </summary>
+      <param name="propertyName">
+      </param>
+    </member>
+    <member name="T:C1.Win.Input.TagCollection">
+      <summary>
+            Represents a collection of tags.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.TagCollection.Count">
+      <summary>
+            Gets the number of items contained in the <see cref="T:C1.Win.Input.TagCollection" /> instance.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.TagCollection.IsFixedSize">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.TagCollection" /> instance is fixed size.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.TagCollection.IsReadOnly">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.TagCollection" /> instance is read-only.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.TagCollection.IsSynchronized">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.TagCollection" /> instance is synchronized.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.TagCollection.SyncRoot">
+      <summary>
+            Gets the synchronize root.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.TagCollection.CollectionChanged">
+      <summary>
+            Occurs when the <see cref="T:C1.Win.Input.TagCollection" /> changes, either by adding or removing an item.
+            </summary>
+      <remarks>
+            see <seealso cref="T:System.Collections.Specialized.INotifyCollectionChanged" /></remarks>
+    </member>
+    <member name="P:C1.Win.Input.TagCollection.Item(System.Int32)">
+      <summary>
+            Gets or sets the object at the specified index.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.Add(System.Object)">
+      <summary>
+            Adds an item to the <see cref="T:C1.Win.Input.TagCollection" />.
+            </summary>
+      <param name="value">The <see cref="T:System.Object" /> to add to the <see cref="T:C1.Win.Input.TagCollection" />.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.AddRange(System.Collections.IEnumerable)">
+      <summary>
+            Adds the items of the specified collection to the end of the <see cref="T:C1.Win.Input.TagCollection" />.
+            </summary>
+      <param name="collection">The specified collection of items.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.AddRange(System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>
+            Adds the items of the specified collection to the end of the <see cref="T:C1.Win.Input.TagCollection" />.
+            </summary>
+      <param name="collection">The specified collection of items.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.Clear">
+      <summary>
+            Removes all items from the <see cref="T:C1.Win.Input.TagCollection" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.Contains(System.Object)">
+      <summary>
+            Determines whether an item is in the <see cref="T:C1.Win.Input.TagCollection" />.
+            </summary>
+      <param name="value">The item to locate in the collection.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.CopyTo(System.Array,System.Int32)">
+      <summary>
+            Copies the entire <see cref="T:C1.Win.Input.TagCollection" /> to a compatible one-dimensional array, starting at the specified index of the target array.
+            </summary>
+      <param name="array">The target array.</param>
+      <param name="index">Start index of the array.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.GetEnumerator">
+      <summary>
+            Returns an enumerator that iterates through the <see cref="T:C1.Win.Input.TagCollection" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.IndexOf(System.Object)">
+      <summary>
+            Searches for the specified item and returns the zero-based index.
+            </summary>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.Insert(System.Int32,System.Object)">
+      <summary>
+            Inserts item into the <see cref="T:C1.Win.Input.TagCollection" /> at the specified index.
+            </summary>
+      <param name="index">Index of the item.</param>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.Remove(System.Object)">
+      <summary>
+            Removes the first occurrence of a specified item from the collection.
+            </summary>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.RemoveAt(System.Int32)">
+      <summary>
+            Removes the item at the specified index of the collection.
+            </summary>
+      <param name="index">The specified index.</param>
+    </member>
+    <member name="M:C1.Win.Input.TagCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+      <summary>
+            Raise CollectionChanged event to any listeners.
+            Properties/methods modifying this <see cref="T:C1.Win.Input.TagCollection" /> will raise
+            a collection changed event through this virtual method.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.C1CheckListSelectedItemCollection">
+      <summary>
+            Represents a collection of selected <see cref="T:C1.Win.Input.C1CheckListItem" /> objects.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Dispose">
+      <summary>
+            Releases the unmanaged resources.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListSelectedItemCollection.Count">
+      <summary>
+            Gets the number of items contained in the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> instance.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListSelectedItemCollection.IsFixedSize">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> instance is fixed size.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListSelectedItemCollection.IsReadOnly">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> instance is read-only.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListSelectedItemCollection.IsSynchronized">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> instance is synchronized.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListSelectedItemCollection.SyncRoot">
+      <summary>
+            Gets the synchronize root.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.C1CheckListSelectedItemCollection.CollectionChanged">
+      <summary>
+            Occurs when the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> changes, either by adding or removing an item.
+            </summary>
+      <remarks>
+            see <seealso cref="T:System.Collections.Specialized.INotifyCollectionChanged" /></remarks>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListSelectedItemCollection.Item(System.Int32)">
+      <summary>
+            Gets or sets the item at the specified index.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Add(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Adds an item to the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+      <param name="item">The <see cref="T:C1.Win.Input.C1CheckListItem" /> to add to the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Add(System.Object)">
+      <summary>
+            Adds an item to the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+      <param name="value">The <see cref="T:C1.Win.Input.C1CheckListItem" /> to add to the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.AddRange(System.Collections.Generic.IEnumerable{C1.Win.Input.C1CheckListItem})">
+      <summary>
+            Adds the items of the specified collection to the end of the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+      <param name="collection">The specified collection of items.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.AddRange(System.Collections.IEnumerable)">
+      <summary>
+            Adds the items of the specified collection to the end of the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+      <param name="collection">The specified collection of items.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Clear">
+      <summary>
+            Removes all items from the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Contains(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Determines whether an item is in the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+      <param name="item">The item to locate in the collection.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Contains(System.Object)">
+      <summary>
+            Determines whether an item is in the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+      <param name="value">The item to locate in the collection.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.CopyTo(C1.Win.Input.C1CheckListItem[],System.Int32)">
+      <summary>
+            Copies the entire <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> to a compatible one-dimensional array, starting at the specified index of the target array.
+            </summary>
+      <param name="array">The target array.</param>
+      <param name="arrayIndex">Start index of the array.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.CopyTo(System.Array,System.Int32)">
+      <summary>
+            Copies the entire <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> to a compatible one-dimensional array, starting at the specified index of the target array.
+            </summary>
+      <param name="array">The target array.</param>
+      <param name="index">Start index of the array.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.GetEnumerator">
+      <summary>
+            Returns an enumerator that iterates through the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.IndexOf(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Searches for the specified item and returns the zero-based index.
+            </summary>
+      <param name="item">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.IndexOf(System.Object)">
+      <summary>
+            Searches for the specified item and returns the zero-based index.
+            </summary>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Insert(System.Int32,C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Inserts item into the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> at the specified index.
+            </summary>
+      <param name="index">Index of the item.</param>
+      <param name="item">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Insert(System.Int32,System.Object)">
+      <summary>
+            Inserts item into the <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> at the specified index.
+            </summary>
+      <param name="index">Index of the item.</param>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Remove(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Removes the first occurrence of a specified item from the collection.
+            </summary>
+      <param name="item">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.Remove(System.Object)">
+      <summary>
+            Removes the first occurrence of a specified item from the collection.
+            </summary>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.RemoveAt(System.Int32)">
+      <summary>
+            Removes the item at the specified index of the collection.
+            </summary>
+      <param name="index">The specified index.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListSelectedItemCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+      <summary>
+            Raise CollectionChanged event to any listeners.
+            Properties/methods modifying this <see cref="T:C1.Win.Input.C1CheckListSelectedItemCollection" /> will raise
+            a collection changed event through this virtual method.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.DisplayMode">
+      <summary>
+            Defines how to display text of control.
+            </summary>
+    </member>
+    <member name="F:C1.Win.Input.DisplayMode.Tag">
+      <summary>
+            Display tags for each item.
+            </summary>
+    </member>
+    <member name="F:C1.Win.Input.DisplayMode.Text">
+      <summary>
+            Display text with separator between each item.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.SelectionMode">
+      <summary>
+            Defines the selection behavior for a control. 
+            </summary>
+    </member>
+    <member name="F:C1.Win.Input.SelectionMode.Single">
+      <summary>
+            The user can select only one item at a time. 
+            </summary>
+    </member>
+    <member name="F:C1.Win.Input.SelectionMode.Multiple">
+      <summary>
+            The user can select multiple items without holding down a modifier key.
+            </summary>
+    </member>
+    <member name="F:C1.Win.Input.SelectionMode.Extended">
+      <summary>
+            The user can select multiple consecutive items while holding down the corresponding modifier key.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.C1CheckListItemStylesEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.Win.Input.C1CheckList.ApplyItemStyles" /> event of a <see cref="T:C1.Win.Input.C1CheckList" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemStylesEventArgs.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.C1CheckListItemStylesEventArgs" /> class.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItemStylesEventArgs.ItemStyles">
+      <summary>
+            Gets the item styles of C1CheckList control.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Localization.Strings">
+      <summary>
+            The <see cref="T:C1.Win.Input.Localization.Strings" /> class contains static properties used for localization.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Localization.Strings.ResourceManager">
+      <summary>
+            The <see cref="P:C1.Win.Input.Localization.Strings.ResourceManager" /> object used for lookup resources.
+            </summary>
+      <remarks>Set this property to the valid value if 
+            you define resources in a Custom Control assembly.</remarks>
+    </member>
+    <member name="P:C1.Win.Input.Localization.Strings.UICulture">
+      <summary>
+            Returns default <see cref="T:System.Globalization.CultureInfo" /> object used as fallback culture.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.C1CheckListItemCollection">
+      <summary>
+            Represents a collection of <see cref="T:C1.Win.Input.C1CheckListItem" /> objects.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItemCollection.Count">
+      <summary>
+            Gets the number of items contained in the <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> instance.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItemCollection.IsFixedSize">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> instance is fixed size.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItemCollection.IsReadOnly">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> instance is read-only.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItemCollection.IsSynchronized">
+      <summary>
+            Gets a value indicating whether the <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> instance is synchronized.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItemCollection.SyncRoot">
+      <summary>
+            Gets the synchronize root.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.C1CheckListItemCollection.CollectionChanged">
+      <summary>
+            Occurs when the <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> changes, either by adding or removing an item.
+            </summary>
+      <remarks>
+            see <seealso cref="T:System.Collections.Specialized.INotifyCollectionChanged" /></remarks>
+    </member>
+    <member name="P:C1.Win.Input.C1CheckListItemCollection.Item(System.Int32)">
+      <summary>
+            Gets or sets the item at the specified index.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Add(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Adds an item to the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+      <param name="item">The <see cref="T:C1.Win.Input.C1CheckListItem" /> to add to the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Add(System.Object)">
+      <summary>
+            Adds an item to the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+      <param name="value">The <see cref="T:C1.Win.Input.C1CheckListItem" /> to add to the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.AddRange(System.Collections.Generic.IEnumerable{C1.Win.Input.C1CheckListItem})">
+      <summary>
+            Adds the items of the specified collection to the end of the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+      <param name="collection">The specified collection of items.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.AddRange(System.Collections.IEnumerable)">
+      <summary>
+            Adds the items of the specified collection to the end of the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+      <param name="collection">The specified collection of items.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Clear">
+      <summary>
+            Removes all items from the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Contains(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Determines whether an item is in the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+      <param name="item">The item to locate in the collection.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Contains(System.Object)">
+      <summary>
+            Determines whether an item is in the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+      <param name="value">The item to locate in the collection.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.CopyTo(C1.Win.Input.C1CheckListItem[],System.Int32)">
+      <summary>
+            Copies the entire <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> to a compatible one-dimensional array, starting at the specified index of the target array.
+            </summary>
+      <param name="array">The target array.</param>
+      <param name="arrayIndex">Start index of the array.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.CopyTo(System.Array,System.Int32)">
+      <summary>
+            Copies the entire <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> to a compatible one-dimensional array, starting at the specified index of the target array.
+            </summary>
+      <param name="array">The target array.</param>
+      <param name="index">Start index of the array.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.GetEnumerator">
+      <summary>
+            Returns an enumerator that iterates through the <see cref="T:C1.Win.Input.C1CheckListItemCollection" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.IndexOf(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Searches for the specified item and returns the zero-based index.
+            </summary>
+      <param name="item">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.IndexOf(System.Object)">
+      <summary>
+            Searches for the specified item and returns the zero-based index.
+            </summary>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Insert(System.Int32,C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Inserts item into the <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> at the specified index.
+            </summary>
+      <param name="index">Index of the item.</param>
+      <param name="item">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Insert(System.Int32,System.Object)">
+      <summary>
+            Inserts item into the <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> at the specified index.
+            </summary>
+      <param name="index">Index of the item.</param>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Remove(C1.Win.Input.C1CheckListItem)">
+      <summary>
+            Removes the first occurrence of a specified item from the collection.
+            </summary>
+      <param name="item">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.Remove(System.Object)">
+      <summary>
+            Removes the first occurrence of a specified item from the collection.
+            </summary>
+      <param name="value">The specified item.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.RemoveAt(System.Int32)">
+      <summary>
+            Removes the item at the specified index of the collection.
+            </summary>
+      <param name="index">The specified index.</param>
+    </member>
+    <member name="M:C1.Win.Input.C1CheckListItemCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+      <summary>
+            Raise CollectionChanged event to any listeners.
+            Properties/methods modifying this <see cref="T:C1.Win.Input.C1CheckListItemCollection" /> will raise
+            a collection changed event through this virtual method.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.CheckListItemStyles">
+      <summary>
+            Represents the styles of <see cref="T:C1.Win.Input.C1CheckList" /> item.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.Default">
+      <summary>
+            Gets the default styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.Selected">
+      <summary>
+            Gets the selected styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.Hot">
+      <summary>
+            Gets the hot styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.HotSelected">
+      <summary>
+            Gets the hot selected styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.UnfocusedSelected">
+      <summary>
+            Gets the unfocused selected styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.Disabled">
+      <summary>
+            Gets the disabled styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.Font">
+      <summary>
+            Gets or sets the font.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.HorizontalAlign">
+      <summary>
+            Gets or sets the horizontal alignment.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.VerticalAlign">
+      <summary>
+            Gets or sets the vertical alignment.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListItemStyles.WordWrap">
+      <summary>
+            Gets or sets whether text should be allowed to wrap.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.CheckListStyles">
+      <summary>
+            Represents the styles of <see cref="T:C1.Win.Input.C1CheckList" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.CheckListStyles.Header">
+      <summary>
+            Gets the styles of header.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BasePropStyle">
+      <summary>
+            Base style with basic properties.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.BasePropStyle.BackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.BasePropStyle.Border">
+      <summary>
+            Gets or sets the thickness of the border around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.BasePropStyle.BorderColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to draw the border around the element.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BaseStyle">
+      <summary>
+            Base style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.BaseStyle.Name">
+      <summary>
+            Gets or sets the style name.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BaseContentStyle">
+      <summary>
+            Base style for all element with content.
+            </summary>
+      <remarks>no font here.</remarks>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.BaseContentStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BaseTheme">
+      <summary>
+            Base theme class.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Input.Theme.MultiSelect.BaseTheme.PropertyChanged">
+      <summary>
+            Fires when any property is changed.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+      <summary>
+            Invokes the PropertyChanged event.
+            </summary>
+      <param name="sender">sender.</param>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.Theme.MultiSelect.BaseTheme" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.#ctor(C1.Win.Input.Theme.MultiSelect.BaseTheme)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.Theme.MultiSelect.BaseTheme" /> control.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.GetStyle(System.String)">
+      <summary>
+            Get style by name.
+            </summary>
+      <param name="name">Style name.</param>
+      <returns>
+        <see cref="T:C1.Framework.Style" /> object.</returns>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.SetStyle(C1.Framework.Style,System.String)">
+      <summary>
+            Set existing style or add new.
+            </summary>
+      <param name="value">Style.</param>
+      <param name="name">Style name.</param>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.Reset">
+      <summary>
+            Reset all styles to default.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.SubscribeOnStyleChanged(C1.Framework.Style)">
+      <summary>
+            To subscribe to events of changing styles.
+            </summary>
+      <param name="item">Style to subscribe.</param>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.BaseTheme.UnsubscribeOnStyleChanged(C1.Framework.Style)">
+      <summary>
+            To unsubscribe to events of changing styles.
+            </summary>
+      <param name="item">Style to unsubscribe.</param>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.BaseTheme.ComponentType">
+      <summary>
+            Component type.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle">
+      <summary>
+            The <see cref="T:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle" /> class contains display attributes that 
+            determine the appearance of DownButton element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Corners">
+      <summary>
+            Gets or sets the radii of the element corners.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Image">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Image" /> for the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Margins">
+      <summary>
+            Gets or sets the thickness of the margins around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Hot">
+      <summary>
+            Gets or sets the style to be used when the element is hot.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Pressed">
+      <summary>
+            Gets or sets the style to be used when the element is pressed.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.HotPressed">
+      <summary>
+            Gets or sets the style to be used when the element is hot and pressed.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle.Disabled">
+      <summary>
+            Gets or sets the style to be used when the element is disabled.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BaseDropDownButtonStyle">
+      <summary>
+            Base style for <see cref="T:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle" /> styles.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.MultiSelectStyles">
+      <summary>
+            The <see cref="T:C1.Win.Input.Theme.MultiSelect.MultiSelectStyles" /> class represents the theme for the C1MultiSelect control 
+            which contains display attributes that determine the appearance of control. 
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.MultiSelectStyles.#ctor(C1.Win.Input.Theme.MultiSelect.MultiSelectStyles)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.Theme.MultiSelect.TagEditorStyles" /> object.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.MultiSelectStyles.DropDownButton">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.Input.Theme.MultiSelect.DropDownButtonStyle" /> contains display attributes that 
+            determine the appearance of DropDownButton element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.MultiSelectStyles.TagEditor">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.Input.Theme.MultiSelect.TagEditorStyles" /> contains display attributes that 
+            determine the appearance of TagEditor element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.MultiSelectStyles.CheckList">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.Input.CheckListStyles" /> contains display attributes that 
+            determine the appearance of CheckList element on the screen.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.MultiSelectStyles.Reset">
+      <summary>
+            Reset all styles to default.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle">
+      <summary>
+            The <see cref="T:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle" /> class contains display attributes that 
+            determine the appearance of RemoveButton element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle.Corners">
+      <summary>
+            Gets or sets the radii of the element corners.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle.Image">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle.Image" /> for the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle.Margins">
+      <summary>
+            Gets or sets the thickness of the margins around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle.Hot">
+      <summary>
+            Gets or sets the style to be used when the element is hot.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle.Disabled">
+      <summary>
+            Gets or sets the style to be used when the element is disabled.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BaseRemoveButtonStyle">
+      <summary>
+            Base style for <see cref="T:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle" /> styles.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle">
+      <summary>
+            The <see cref="T:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle" /> class contains display attributes that 
+            determine the appearance of C1TagEditoron control on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle.Font">
+      <summary>
+            Gets or sets text font of element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle.Margins">
+      <summary>
+            Gets or sets the thickness of the margins around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle.Hot">
+      <summary>
+            Gets or sets the style to be used when the element is hot.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle.Disabled">
+      <summary>
+            Gets or sets the style to be used when the element is disabled.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BaseTagEditorCommonStyle">
+      <summary>
+            Base style for <see cref="T:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle" />  styles.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.TagEditorStyles">
+      <summary>
+            The <see cref="T:C1.Win.Input.Theme.MultiSelect.TagEditorStyles" /> class represents the theme for the C1TagEditor control 
+            which contains display attributes that determine the appearance of control. 
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.TagEditorStyles.#ctor(C1.Win.Input.Theme.MultiSelect.TagEditorStyles)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Input.Theme.MultiSelect.TagEditorStyles" /> object.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorStyles.Common">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.Input.Theme.MultiSelect.TagEditorCommonStyle" /> contains display attributes that 
+            determine the appearance of C1TagEditor control on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorStyles.Tag">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.Input.Theme.MultiSelect.TagStyle" /> contains display attributes that 
+            determine the appearance of tag element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagEditorStyles.RemoveButton">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.Input.Theme.MultiSelect.RemoveButtonStyle" /> contains display attributes that 
+            determine the appearance of RemoveButton element on the screen.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Input.Theme.MultiSelect.TagEditorStyles.Reset">
+      <summary>
+            Reset all styles to default.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.TagStyle">
+      <summary>
+            The <see cref="T:C1.Win.Input.Theme.MultiSelect.TagStyle" /> class contains display attributes that 
+            determine the appearance of tag element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagStyle.Corners">
+      <summary>
+            Gets or sets the radii of the element corners.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagStyle.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagStyle.Margins">
+      <summary>
+            Gets or sets the thickness of the margins around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagStyle.Hot">
+      <summary>
+            Gets or sets the style to be used when the element is hot.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagStyle.Pressed">
+      <summary>
+            Gets or sets the style to be used when the element is pressed.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.Theme.MultiSelect.TagStyle.Disabled">
+      <summary>
+            Gets or sets the style to be used when the element is disabled.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.Theme.MultiSelect.BaseTagStyle">
+      <summary>
+            Base style for <see cref="T:C1.Win.Input.Theme.MultiSelect.TagStyle" /> styles.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.HeaderStyle">
+      <summary>
+            Defines style of <see cref="T:C1.Win.Input.C1CheckList" /> header.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.HeaderStyle.Font">
+      <summary>
+            Gets or sets the font.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.HeaderStyle.HorizontalAlign">
+      <summary>
+            Gets or sets the horizontal alignment.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.HeaderStyle.VerticalAlign">
+      <summary>
+            Gets or sets the vertical alignment.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.HeaderStyle.WordWrap">
+      <summary>
+            Gets or sets whether text should be allowed to wrap.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Input.ItemStyle">
+      <summary>
+            Defines style of <see cref="T:C1.Win.Input.C1CheckList" /> item state.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.ItemStyle.BackColor">
+      <summary>
+            Gets or sets the background color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Input.ItemStyle.ForeColor">
+      <summary>
+            Gets or sets the foreground color.
+            </summary>
+    </member>
+  </members>
+</doc>

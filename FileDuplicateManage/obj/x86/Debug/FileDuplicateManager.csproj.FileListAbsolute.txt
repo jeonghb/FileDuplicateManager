@@ -1,0 +1,14 @@
+D:\Git\FileDuplicateManager\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+D:\Git\FileDuplicateManager\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+D:\Git\FileDuplicateManager\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+D:\Git\FileDuplicateManager\FileDuplicateManage\bin\x86\Debug\ObjectListView.dll
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManager.csproj.AssemblyReference.cache
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManager.csproj.ResolveComReference.cache
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.FrmFileDuplicateManage.resources
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManager.csproj.GenerateResource.cache
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManager.csproj.CoreCompileInputs.cache
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDupl.F1F708B4.Up2Date
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+D:\Git\FileDuplicateManager\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb

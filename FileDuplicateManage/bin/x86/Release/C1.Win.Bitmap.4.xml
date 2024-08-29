@@ -1,0 +1,2715 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Win.Bitmap.4</name>
+    </assembly>
+    <members>
+        <member name="F:C1.Util.Licensing.VersionConst.VerString">
+            <summary>
+            WinForms version string representation (4 dot-delimited numbers).
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.VersionConst.VersionStr">
+            <summary>
+            Same as <see cref="F:C1.Util.Licensing.VersionConst.VerString"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.VersionConst.VerAsmName">
+            <summary>
+            For .NET 4.0 version only, used for designer assembly names.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.C1Bitmap">
+            <summary>
+            Represents an uncompressed in-memory bitmap for the purpose of its conversion and transformation.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.C1Bitmap"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.#ctor(C1.Util.DX.WIC.ImagingFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.C1Bitmap"/> class.
+            </summary>
+            <param name="imagingFactory">The existent imaging factory, to avoid duplicating factories.</param>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.IsDisposed">
+            <summary>
+            Gets a value indicating whether the instance of the <see cref="T:C1.Win.Bitmap.C1Bitmap"/> class has been disposed of.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Dispose(System.Boolean)">
+            <summary>
+            Performs cleanup operations on managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Finalize">
+            <summary>
+            Performs cleanup operations on unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.ImagingFactory">
+            <summary>
+            Gets the imaging factory that is used in this bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.NativeBitmap">
+            <summary>
+            Gets the internal image that is an IWICBitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.HasImage">
+            <summary>
+            Gets a value indicating whether the internal image is loaded or created.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.HasMetadata">
+            <summary>
+            Gets a value indicating whether the image metadata is loaded.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.ContainerFormat">
+            <summary>
+            Gets the container format for images loaded from a stream.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.PixelFormat">
+            <summary>
+            Gets the pixel format of the image.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.PixelWidth">
+            <summary>
+            Gets the pixel width of the image.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.PixelHeight">
+            <summary>
+            Gets the pixel height of the image.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.DpiX">
+            <summary>
+            Gets the x-axis dpi resolution.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.DpiY">
+            <summary>
+            Gets the y-axis dpi resolution.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.ExtendedMetadata">
+            <summary>
+            Gets or sets whether the Global and Frame metadata dictionaries should be loaded.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.GlobalMetadata">
+            <summary>
+            Gets the global level metadata for GIF images.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.FrameMetadata">
+            <summary>
+            Gets the frame level metadata for JPG, PNG, JPEG-XR, GIF, TIFF images.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.CreateImage(System.Int32,System.Int32,C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Creates the internal image of the given size with uninitialized content.
+            </summary>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <param name="pixelFormat">The pixel format of the image.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.DiscardImage">
+            <summary>
+            Releases the internal image and clears all metadata.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SetDpi(System.Double)">
+            <summary>
+            Changes the physical resolution of the image.
+            </summary>
+            <param name="dpi">The horizontal and vertical resolution.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SetDpi(System.Double,System.Double)">
+            <summary>
+            Changes the physical resolution of the image.
+            </summary>
+            <param name="dpiX">The horizontal resolution.</param>
+            <param name="dpiY">The vertical resolution.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Load(System.IO.Stream,C1.Win.Bitmap.BaseTransform[])">
+            <summary>
+            Loads the image from a System.IO.Stream.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Load(System.IO.Stream,C1.Win.Bitmap.ContainerFormat,System.Nullable{C1.Win.Bitmap.ImageRect},C1.Win.Bitmap.BaseTransform[])">
+            <summary>
+            Loads the image from a System.IO.Stream.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <param name="containerFormat">The image container format; use Unknown to detect the format automatically.</param>
+            <param name="imageRect">Clipping rectangle for the image after all transformations.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.LoadMetadata(System.IO.Stream,C1.Win.Bitmap.ContainerFormat)">
+            <summary>
+            Loads the metadata of an image from a System.IO.Stream.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <param name="containerFormat">The image container format; use Unknown to detect the format automatically.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Load(System.String,C1.Win.Bitmap.BaseTransform[])">
+            <summary>
+            Loads the image from a file.
+            </summary>
+            <param name="fileName">The input file name.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Load(System.String,C1.Win.Bitmap.ContainerFormat,System.Nullable{C1.Win.Bitmap.ImageRect},C1.Win.Bitmap.BaseTransform[])">
+            <summary>
+            Loads the image from a file.
+            </summary>
+            <param name="fileName">The input file name.</param>
+            <param name="containerFormat">The image container format; use Unknown to detect the format automatically.</param>
+            <param name="imageRect">Clipping rectangle for the image after all transformations.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.LoadMetadata(System.String,C1.Win.Bitmap.ContainerFormat)">
+            <summary>
+            Loads the metadata of an image from a file.
+            </summary>
+            <param name="fileName">The input file name.</param>
+            <param name="containerFormat">The image container format; use Unknown to detect the format automatically.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Save(System.IO.Stream,C1.Win.Bitmap.ContainerFormat,C1.Win.Bitmap.BaseOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream using the specified format and options.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="format">The container format that determines the image encoder.</param>
+            <param name="options">The options for the specified image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsBmp(System.IO.Stream,C1.Win.Bitmap.BmpOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in BMP format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the BMP image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsGif(System.IO.Stream,C1.Win.Bitmap.GifOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in GIF format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the GIF image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsJpeg(System.IO.Stream,C1.Win.Bitmap.JpegOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in JPEG format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the JPEG image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsJpegXR(System.IO.Stream,C1.Win.Bitmap.JpegXROptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in JPEG XR format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the JPEG XR image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsPng(System.IO.Stream,C1.Win.Bitmap.PngOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in PNG format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the PNG image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsTiff(System.IO.Stream,C1.Win.Bitmap.TiffOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in TIFF format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the TIFF image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Save(System.String,C1.Win.Bitmap.ContainerFormat,C1.Win.Bitmap.BaseOptions)">
+            <summary>
+            Saves the image to a file using the specified format and options.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="format">The container format that determines the image encoder.</param>
+            <param name="options">The options for the specified image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsBmp(System.String,C1.Win.Bitmap.BmpOptions)">
+            <summary>
+            Saves the image to a file in BMP format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the BMP image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsGif(System.String,C1.Win.Bitmap.GifOptions)">
+            <summary>
+            Saves the image to a file in GIF format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the GIF image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsJpeg(System.String,C1.Win.Bitmap.JpegOptions)">
+            <summary>
+            Saves the image to a file in JPEG format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the JPEG image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsJpegXR(System.String,C1.Win.Bitmap.JpegXROptions)">
+            <summary>
+            Saves the image to a file in JPEG XR format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the JPEG XR image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsPng(System.String,C1.Win.Bitmap.PngOptions)">
+            <summary>
+            Saves the image to a file in PNG format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the PNG image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SaveAsTiff(System.String,C1.Win.Bitmap.TiffOptions)">
+            <summary>
+            Saves the image to a file in TIFF format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the TIFF image encoder.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ToByteArray">
+            <summary>
+            Stores the image buffer to a byte array (without the palette and metadata information).
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ToByteArray(C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Stores a part of the image buffer to a byte array.
+            </summary>
+            <param name="srcRect">The source rectangle within the image.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ExportFragment(System.IntPtr,C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Copies a fragment of the image to the unmanaged block of memory.
+            </summary>
+            <param name="dstPtr">The pointer to the unmanaged block of memory or IntPtr.Zero.</param>
+            <param name="srcRect">The source rectangle within the image.</param>
+            <returns>Returns the number of bytes in the requested fragment of the image.</returns>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ToGdiBitmap">
+            <summary>
+            Creates a System.Drawing.Bitmap from the image.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ToGdiBitmap(C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Creates a System.Drawing.Bitmap from a part of the image.
+            </summary>
+            <param name="srcRect">The source rectangle within the image.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ExportFragment(System.Drawing.Bitmap,C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Copies a fragment of the image to the given System.Drawing.Bitmap.
+            </summary>
+            <param name="gdiBitmap">The destination System.Drawing.Bitmap.</param>
+            <param name="srcRect">The source rectangle within the image.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ToD2DBitmap1(C1.Util.DX.Direct2D.DeviceContext,C1.Util.DX.Direct2D.BitmapOptions,C1.Win.Bitmap.BaseTransform[])">
+            <summary>
+            Creates a D2D.Bitmap1 from the image data.
+            </summary>
+            <param name="context">The device context used to create a D2D bitmap.</param>
+            <param name="bitmapOptions">Specifies how a bitmap can be used.</param>
+            <param name="transforms">The transformation chain, can be empty to just copy the image.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Import(C1.Win.Bitmap.C1Bitmap)">
+            <summary>
+            Loads the image from another instance of C1Bitmap.
+            </summary>
+            <param name="bitmap">The source bitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ImportAsFragment(C1.Win.Bitmap.C1Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Loads another C1Bitmap to the given destination within the image.
+            </summary>
+            <param name="bitmap">The source bitmap.</param>
+            <param name="dstX">The destination X pixel coordinate within the target bitmap.</param>
+            <param name="dstY">The destination Y pixel coordinate within the target bitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Import(System.Byte[],System.Int32,System.Int32,C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Loads the image from a byte array containing the pixels buffer.
+            </summary>
+            <param name="bytes">The source byte array with pixel buffer.</param>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <param name="pixelFormat">The pixel format of the image.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ImportAsFragment(System.Byte[],C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Loads the pixel buffer from a byte array to the given destination within the image.
+            </summary>
+            <param name="bytes">The source byte array with pixel buffer.</param>
+            <param name="dstRect">The destination rectangle within the target bitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Import(System.IntPtr,System.Int32,System.Int32,C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Loads the image from the unmanaged block of memory pointed by IntPtr.
+            </summary>
+            <param name="srcPtr">The pointer to the beginning of the unmanaged block of memory.</param>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <param name="pixelFormat">The pixel format of the image.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ImportAsFragment(System.IntPtr,C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Copies the unmanaged block of memory to the given destination within the image.
+            </summary>
+            <param name="srcPtr">The pointer to the beginning of the unmanaged block of memory.</param>
+            <param name="dstRect">The destination rectangle within the target bitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Import(System.Drawing.Bitmap)">
+            <summary>
+            Loads the image from a System.Drawing.Bitmap.
+            </summary>
+            <param name="gdiBitmap">The source System.Drawing.Bitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ImportAsFragment(System.Drawing.Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Loads a System.Drawing.Bitmap to the given destination within the image.
+            </summary>
+            <param name="gdiBitmap">The source System.Drawing.Bitmap.</param>
+            <param name="dstX">The destination X pixel coordinate within the target bitmap.</param>
+            <param name="dstY">The destination Y pixel coordinate within the target bitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Import(C1.Util.DX.Direct2D.Bitmap1)">
+            <summary>
+            Loads the image from a D2D.Bitmap1 (created with D2D.BitmapOptions.CpuRead).
+            </summary>
+            <param name="d2dBitmap">The source D2D.Bitmap1 image created with D2D.BitmapOptions.CpuRead.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Import(C1.Util.DX.Direct2D.Bitmap1,C1.Util.DX.Direct2D.DeviceContext,C1.Util.DX.RectL)">
+            <summary>
+            Loads the image from a D2D.Bitmap1.
+            </summary>
+            <param name="d2dBitmap">The source D2D.Bitmap1 image.</param>
+            <param name="context">The device context used to create a D2D bitmap.</param>
+            <param name="srcRect">The source rectangle within d2dBitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ImportAsFragment(C1.Util.DX.Direct2D.Bitmap1,C1.Util.DX.Direct2D.DeviceContext,C1.Util.DX.RectL,System.Int32,System.Int32)">
+            <summary>
+            Loads a fragment of the D2D.Bitmap1 to the given destination within the image.
+            </summary>
+            <param name="d2dBitmap">The source D2D.Bitmap1.</param>
+            <param name="context">The device context used to create a D2D bitmap.</param>
+            <param name="srcRect">The source rectangle within d2dBitmap.</param>
+            <param name="dstX">The destination X pixel coordinate within the target bitmap.</param>
+            <param name="dstY">The destination Y pixel coordinate within the target bitmap.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.CreatePredefinedPalette(C1.Win.Bitmap.PaletteType,System.Boolean)">
+            <summary>
+            Creates one of the pre-defined palettes specified by PaletteType and optionally adds a transparent color.
+            </summary>
+            <param name="paletteType">The desired pre-defined palette type.</param>
+            <param name="addTransparentColor">The optional transparent color to add to the palette. If no transparent color is needed, use false. When initializing to a grayscale or black and white palette, set this parameter to false.</param>
+            <remarks>
+            For palettes with less than 256 entries, the transparent entry is added to the end of the palette
+            (that is, a 16-color palette becomes a 17-color palette). For palettes with 256 colors, the transparent
+            palette entry will replace the last entry in the pre-defined palette.
+            </remarks>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.CreatePaletteFromBitmap(System.Int32,System.Boolean)">
+            <summary>
+            Creates a palette using a computed optimized values based on the bitmap.
+            </summary>
+            <param name="colorCount">The number of colors to initialize the palette with.</param>
+            <param name="addTransparentColor">A value to indicate whether to add a transparent color.</param>
+            <remarks>
+            The resulting palette contains the specified number of colors which best represent the colors
+            present in the bitmap. The algorithm operates on the opaque RGB color value of each pixel
+            in the reference bitmap and hence ignores any alpha values. If a transparent color is required,
+            set the addTransparentColor parameter to true and one fewer optimized color will be computed,
+            reducing the colorCount, and a fully transparent color entry will be added.
+            </remarks>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.GetPalette">
+            <summary>
+            Retrieves the color table for indexed pixel formats, or null for other formats.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.SetPalette(C1.Win.Bitmap.C1Bitmap.Palette)">
+            <summary>
+            Sets the new color table for the bitmap.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.C1Bitmap.Palette">
+            <summary>
+            Represents the bitmap palette for indexed pixel formats.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Palette.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.C1Bitmap"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.Palette.PaletteType">
+            <summary>
+            Gets or sets the palette type of the associated bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.Palette.HasAlpha">
+            <summary>
+            Gets or sets a value that describes whether the palette contains an alpha transparent color.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.C1Bitmap.Palette.Colors">
+            <summary>
+            Gets the list of palette colors (allows modifications).
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.BitsPerPixel(C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Returns the number of bits-per-pixel (bpp) for the given value of the PixelFormat enumeration.
+            </summary>
+            <param name="pixelFormat">The PixelFormat enumeration value.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.PixelFormatToGuid(C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Returns a GUID of the corresponding WIC pixel format for the given value of the PixelFormat enumeration.
+            </summary>
+            <param name="pixelFormat">The PixelFormat enumeration value.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.PixelFormatFromGuid(System.Guid)">
+            <summary>
+            Converts a GUID of the WIC pixel format to the PixelFormat enumeration value. 
+            </summary>
+            <param name="pfGuid">The GUID of the WIC pixel format.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.ToGdiPixelFormat(C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Returns the System.Drawing.Imaging.PixelFormat enumeration value for the given PixelFormat value.
+            </summary>
+            <param name="pixelFormat">The PixelFormat enumeration value.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.FromGdiPixelFormat(System.Drawing.Imaging.PixelFormat)">
+            <summary>
+            Converts a System.Drawing.Imaging.PixelFormat to the PixelFormat enumeration value. 
+            </summary>
+            <param name="pixelFormat">The source value of the System.Drawing.Imaging.PixelFormat type.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.CanConvertTo(C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Determines if the current pixel format can be converted to the destination pixel format.
+            </summary>
+            <param name="pixelFormat">The destionation pixel format.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.C1Bitmap.Transform(C1.Win.Bitmap.BaseTransform[])">
+            <summary>
+            Creates a new instance of <see cref="T:C1.Win.Bitmap.C1Bitmap"/> as a copy of the current bitmap passed through the set of transformations.
+            </summary>
+            <param name="transforms">The transformation chain, can be empty to just copy the image.</param>
+        </member>
+        <member name="T:C1.Win.Bitmap.ContainerFormat">
+            <summary>
+            Specifies the image container format.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.Unknown">
+            <summary>
+            Unknown format.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.Bmp">
+            <summary>
+            BMP (Windows Bitmap Format), BMP Specification v5.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.Gif">
+            <summary>
+            GIF (Graphics Interchange Format 89a), GIF Specification 89a/89m.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.Ico">
+            <summary>
+            ICO (Icon Format).
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.Jpeg">
+            <summary>
+            JPEG (Joint Photographic Experts Group), JFIF Specification 1.02.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.JpegXR">
+            <summary>
+            HD Photo, also known as Windows Media Photo.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.Png">
+            <summary>
+            PNG (Portable Network Graphics), PNG Specification 1.2.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ContainerFormat.Tiff">
+            <summary>
+            TIFF (Tagged Image File Format), TIFF Specification 6.0.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.DitherType">
+            <summary>
+            Specifies the type of dither algorithm to apply when converting between pixel formats.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.None">
+            <summary>
+            A solid color algorithm without dither.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.Solid">
+            <summary>
+            A solid color algorithm without dither.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.Ordered4x4">
+            <summary>
+            A 4x4 ordered dither algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.Ordered8x8">
+            <summary>
+            An 8x8 ordered dither algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.Ordered16x16">
+            <summary>
+            A 16x16 ordered dither algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.Spiral4x4">
+            <summary>
+            A 4x4 spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.Spiral8x8">
+            <summary>
+            An 8x8 spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.DualSpiral4x4">
+            <summary>
+            A 4x4 dual spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.DualSpiral8x8">
+            <summary>
+            An 8x8 dual spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.DitherType.ErrorDiffusion">
+            <summary>
+            An error diffusion algorithm.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.InterpolationMode">
+            <summary>
+            Specifies the sampling or filtering mode to use when scaling an image.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.InterpolationMode.NearestNeighbor">
+            <summary>
+            A nearest neighbor interpolation algorithm. Also known as nearest pixel or point interpolation.
+            </summary>
+            <remarks>
+            The output pixel is assigned the value of the pixel that the point falls within. No other pixels are considered.
+            </remarks>
+        </member>
+        <member name="F:C1.Win.Bitmap.InterpolationMode.Linear">
+            <summary>
+            A bilinear interpolation algorithm.
+            </summary>
+            <remarks>
+            The output pixel values are computed as a weighted average of the nearest four pixels in a 2x2 grid.
+            </remarks>
+        </member>
+        <member name="F:C1.Win.Bitmap.InterpolationMode.Cubic">
+            <summary>
+            A bicubic interpolation algorithm.
+            </summary>
+            <remarks>
+            Destination pixel values are computed as a weighted average of the nearest sixteen pixels in a 4x4 grid.
+            </remarks>
+        </member>
+        <member name="F:C1.Win.Bitmap.InterpolationMode.Fant">
+            <summary>
+            A Fant resampling algorithm.
+            </summary>
+            <remarks>
+            Destination pixel values are computed as a weighted average of the all the pixels that map to the new pixel.
+            </remarks>
+        </member>
+        <member name="F:C1.Win.Bitmap.InterpolationMode.HighQualityCubic">
+            <summary>
+            A high quality bicubic interpolation algorithm.
+            </summary>
+            <remarks>
+            Destination pixel values are computed using a much denser sampling kernel than regular cubic.
+            The kernel is resized in response to the scale factor, making it suitable for downscaling by factors greater than 2.
+            This value is supported beginning with Windows 10.
+            </remarks>
+        </member>
+        <member name="T:C1.Win.Bitmap.PaletteType">
+            <summary>
+            Specifies the type of palette used for indexed pixel formats.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.Custom">
+            <summary>
+            An arbitrary custom palette provided by caller.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.MedianCut">
+            <summary>
+            An optimal palette generated using a median-cut algorithm. Derived from the colors in an image.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedBW">
+            <summary>
+            A black and white palette.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedHalftone8">
+            <summary>
+            A palette that has its 8-color on-off primaries and the 16 system colors added. With duplicates removed, 16 colors are available.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedHalftone27">
+            <summary>
+            A palette that has 3 intensity levels of each primary: 27-color on-off primaries and the 16 system colors added. With duplicates removed, 35 colors are available.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedHalftone64">
+            <summary>
+            A palette that has 4 intensity levels of each primary: 64-color on-off primaries and the 16 system colors added. With duplicates removed, 72 colors are available.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedHalftone125">
+            <summary>
+            A palette that has 5 intensity levels of each primary: 125-color on-off primaries and the 16 system colors added. With duplicates removed, 133 colors are available.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedHalftone216">
+            <summary>
+            A palette that has 6 intensity levels of each primary: 216-color on-off primaries and the 16 system colors added. With duplicates removed, 224 colors are available.
+            </summary>
+            <remarks>
+            This is the same as FixedHalftoneWeb.
+            </remarks>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedWebPalette">
+            <summary>
+            A palette that has 6 intensity levels of each primary: 216-color on-off primaries and the 16 system colors added. With duplicates removed, 224 colors are available.
+            </summary>
+            <remarks>
+            This is the same as WICBitmapPaletteTypeFixedHalftone216.
+            </remarks>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedHalftone252">
+            <summary>
+            A palette that has its 252-color on-off primaries and the 16 system colors added. With duplicates removed, 256 colors are available.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedHalftone256">
+            <summary>
+            A palette that has its 256-color on-off primaries and the 16 system colors added. With duplicates removed, 256 colors are available.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedGray4">
+            <summary>
+            A palette that has 4 shades of gray.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedGray16">
+            <summary>
+            A palette that has 16 shades of gray.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteType.FixedGray256">
+            <summary>
+            A palette that has 256 shades of gray.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.PixelFormat">
+            <summary>
+            Describes the memory layout of each pixel in a bitmap.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Unknown">
+            <summary>
+            Unknown format.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.FormatBlackWhite">
+            <summary>
+            See GUID_WICPixelFormatBlackWhite.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format1bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat1bppIndexed.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format2bppGray">
+            <summary>
+            See GUID_WICPixelFormat2bppGray.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format2bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat2bppIndexed.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format4bppGray">
+            <summary>
+            See GUID_WICPixelFormat4bppGray.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format4bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat4bppIndexed.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format8bppAlpha">
+            <summary>
+            See GUID_WICPixelFormat8bppAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format8bppCb">
+            <summary>
+            See GUID_WICPixelFormat8bppCb.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format8bppCr">
+            <summary>
+            See GUID_WICPixelFormat8bppCr.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format8bppGray">
+            <summary>
+            See GUID_WICPixelFormat8bppGray.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format8bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat8bppIndexed.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format8bppY">
+            <summary>
+            See GUID_WICPixelFormat8bppY.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format16bppBGR555">
+            <summary>
+            See GUID_WICPixelFormat16bppBGR555.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format16bppBGR565">
+            <summary>
+            See GUID_WICPixelFormat16bppBGR565.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format16bppBGRA5551">
+            <summary>
+            See GUID_WICPixelFormat16bppBGRA5551.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format16bppCbCr">
+            <summary>
+            See GUID_WICPixelFormat16bppCbCr.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format16bppGray">
+            <summary>
+            See GUID_WICPixelFormat16bppGray.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format16bppGrayFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat16bppGrayFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format16bppGrayHalf">
+            <summary>
+            See GUID_WICPixelFormat16bppGrayHalf.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format24bpp3Channels">
+            <summary>
+            See GUID_WICPixelFormat24bpp3Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format24bppBGR">
+            <summary>
+            See GUID_WICPixelFormat24bppBGR.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format24bppRGB">
+            <summary>
+            See GUID_WICPixelFormat24bppRGB.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bpp3ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat32bpp3ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bpp4Channels">
+            <summary>
+            See GUID_WICPixelFormat32bpp4Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppBGR">
+            <summary>
+            See GUID_WICPixelFormat32bppBGR.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppBGR101010">
+            <summary>
+            See GUID_WICPixelFormat32bppBGR101010.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppBGRA">
+            <summary>
+            See GUID_WICPixelFormat32bppBGRA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppCMYK">
+            <summary>
+            See GUID_WICPixelFormat32bppCMYK.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppGrayFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat32bppGrayFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppGrayFloat">
+            <summary>
+            See GUID_WICPixelFormat32bppGrayFloat.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppPBGRA">
+            <summary>
+            See GUID_WICPixelFormat32bppPBGRA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppPRGBA">
+            <summary>
+            See GUID_WICPixelFormat32bppPRGBA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppRGB">
+            <summary>
+            See GUID_WICPixelFormat32bppRGB.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppRGBA">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppRGBA1010102">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBA1010102.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppRGBA1010102XR">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBA1010102XR.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format32bppRGBE">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBE.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format40bpp4ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat40bpp4ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format40bpp5Channels">
+            <summary>
+            See GUID_WICPixelFormat40bpp5Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format40bppCMYKAlpha">
+            <summary>
+            See GUID_WICPixelFormat40bppCMYKAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bpp3Channels">
+            <summary>
+            See GUID_WICPixelFormat48bpp3Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bpp5ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat48bpp5ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bpp6Channels">
+            <summary>
+            See GUID_WICPixelFormat48bpp6Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bppBGR">
+            <summary>
+            See GUID_WICPixelFormat48bppBGR.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bppBGRFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat48bppBGRFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bppRGB">
+            <summary>
+            See GUID_WICPixelFormat48bppRGB.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat48bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format48bppRGBHalf">
+            <summary>
+            See GUID_WICPixelFormat48bppRGBHalf.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format56bpp6ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat56bpp6ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format56bpp7Channels">
+            <summary>
+            See GUID_WICPixelFormat56bpp7Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bpp3ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat64bpp3ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bpp4Channels">
+            <summary>
+            See GUID_WICPixelFormat64bpp4Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bpp7ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat64bpp7ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bpp8Channels">
+            <summary>
+            See GUID_WICPixelFormat64bpp8Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppBGRA">
+            <summary>
+            See GUID_WICPixelFormat64bppBGRA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppBGRAFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat64bppBGRAFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppCMYK">
+            <summary>
+            See GUID_WICPixelFormat64bppCMYK.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppPBGRA">
+            <summary>
+            See GUID_WICPixelFormat64bppPBGRA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppPRGBA">
+            <summary>
+            See GUID_WICPixelFormat64bppPRGBA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppPRGBAHalf">
+            <summary>
+            See GUID_WICPixelFormat64bppPRGBAHalf.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppRGB">
+            <summary>
+            See GUID_WICPixelFormat64bppRGB.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppRGBA">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBA.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppRGBAFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBAFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppRGBAHalf">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBAHalf.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format64bppRGBHalf">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBHalf.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format72bpp8ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat72bpp8ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format80bpp4ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat80bpp4ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format80bpp5Channels">
+            <summary>
+            See GUID_WICPixelFormat80bpp5Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format80bppCMYKAlpha">
+            <summary>
+            See GUID_WICPixelFormat80bppCMYKAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format96bpp5ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat96bpp5ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format96bpp6Channels">
+            <summary>
+            See GUID_WICPixelFormat96bpp6Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format96bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat96bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format96bppRGBFloat">
+            <summary>
+            See GUID_WICPixelFormat96bppRGBFloat.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format112bpp6ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat112bpp6ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format112bpp7Channels">
+            <summary>
+            See GUID_WICPixelFormat112bpp7Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format128bpp7ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat128bpp7ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format128bpp8Channels">
+            <summary>
+            See GUID_WICPixelFormat128bpp8Channels.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format128bppPRGBAFloat">
+            <summary>
+            See GUID_WICPixelFormat128bppPRGBAFloat.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format128bppRGBAFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBAFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format128bppRGBAFloat">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBAFloat.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format128bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format128bppRGBFloat">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBFloat.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PixelFormat.Format144bpp8ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat144bpp8ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.PngFilter">
+            <summary>
+            Describes the PNG filters available for compression optimization.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PngFilter.Unspecified">
+            <summary>
+            Indicates an unspecified PNG filter. This enables WIC to algorithmically choose the best filtering option for the image.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PngFilter.None">
+            <summary>
+            Indicates no PNG filter.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PngFilter.Sub">
+            <summary>
+            Indicates a PNG sub filter.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PngFilter.Up">
+            <summary>
+            Indicates a PNG up filter.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PngFilter.Average">
+            <summary>
+            Indicates a PNG average filter.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PngFilter.Paeth">
+            <summary>
+            Indicates a PNG paeth filter.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PngFilter.Adaptive">
+            <summary>
+            Indicates a PNG adaptive filter. This enables WIC to choose the best filtering mode on a per-scanline basis.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.TiffCompression">
+            <summary>
+            Specifies the Tagged Image File Format (TIFF) compression options.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.DontCare">
+            <summary>
+            Indicates a suitable compression algorithm based on the image and pixel format.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.None">
+            <summary>
+            Indicates no compression.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.CCITT3">
+            <summary>
+            Indicates a CCITT3 compression algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.CCITT4">
+            <summary>
+            Indicates a CCITT4 compression algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.LZW">
+            <summary>
+            Indicates a LZW compression algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.RLE">
+            <summary>
+            Indicates a RLE compression algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.ZIP">
+            <summary>
+            Indicates a ZIP compression algorithm.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TiffCompression.LZWHDifferencing">
+            <summary>
+            Indicates an LZWH differencing algorithm.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.TransformOptions">
+            <summary>
+            Specifies the flip and rotation transforms.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TransformOptions.Rotate0">
+            <summary>
+            A rotation of 0 degrees.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TransformOptions.Rotate90">
+            <summary>
+            A clockwise rotation of 90 degrees.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TransformOptions.Rotate180">
+            <summary>
+            A clockwise rotation of 180 degrees.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TransformOptions.Rotate270">
+            <summary>
+            A clockwise rotation of 270 degrees.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TransformOptions.FlipHorizontal">
+            <summary>
+            A horizontal flip. Pixels are flipped around the vertical y-axis.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.TransformOptions.FlipVertical">
+            <summary>
+            A vertical flip. Pixels are flipped around the horizontal x-axis.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.ImageRect">
+            <summary>
+            Represents a rectangle for clipping images.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ImageRect.X">
+            <summary>
+            The horizontal coordinate of the rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ImageRect.Y">
+            <summary>
+            The vertical coordinate of the rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ImageRect.Width">
+            <summary>
+            The width of the rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ImageRect.Height">
+            <summary>
+            The height of the rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.ImageRect.Empty">
+            <summary>
+            An empty rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a <see cref="T:C1.Win.Bitmap.ImageRect"/> struct from (left, top, right, bottom) coordinates.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.#ctor(C1.Util.DX.RectL)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.ToRectL">
+            <summary>
+            Converts <see cref="T:C1.Win.Bitmap.ImageRect"/> to <see cref="T:C1.Util.DX.RectL"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.#ctor(System.Drawing.Rectangle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.ToRectangle">
+            <summary>
+            Converts <see cref="T:C1.Win.Bitmap.ImageRect"/> to <see cref="T:System.Drawing.Rectangle"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.ImageRect.Left">
+            <summary>
+            Gets or sets the x-coordinate of the left edge.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.ImageRect.Top">
+            <summary>
+            Gets or sets the y-coordinate of the top edge.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.ImageRect.Right">
+            <summary>
+            Gets or sets the x-coordinate of the right edge.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.ImageRect.Bottom">
+            <summary>
+            Gets or sets the y-coordinate of the bottom edge.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Offset(System.Int32,System.Int32)">
+            <summary>
+            Offsets the rectangle by the specified amount.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Inflate(System.Int32,System.Int32)">
+            <summary>
+            Inflates the rectangle by the specified amount.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Contains(System.Int32,System.Int32)">
+            <summary>
+            Determines if the specified point is contained within this rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Contains(C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Determines if the specified rectangle is fully contained within this rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.IntersectsWith(C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Determines if this rectangle intersects with rect.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Intersect(C1.Win.Bitmap.ImageRect,C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Returns a rectangle that represents the intersection of two rectangles.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Union(C1.Win.Bitmap.ImageRect,C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Creates the smallest possible third rectangle that can contain both of two rectangles that form a union.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.ImageRect.HasSpace">
+            <summary>
+            Determines if there is some space within the rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.Equals(C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.op_Equality(C1.Win.Bitmap.ImageRect,C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Determines if the specified values are equal.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.op_Inequality(C1.Win.Bitmap.ImageRect,C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Determines if the specified values are not equal.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.op_Explicit(C1.Win.Bitmap.ImageRect)~C1.Util.DX.RectL">
+            <summary>
+            Performs an explicit conversion from <see cref="T:C1.Win.Bitmap.ImageRect"/> to <see cref="T:C1.Util.DX.RectL"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.op_Explicit(C1.Util.DX.RectL)~C1.Win.Bitmap.ImageRect">
+            <summary>
+            Performs an explicit conversion from <see cref="T:C1.Util.DX.RectL"/> to <see cref="T:C1.Win.Bitmap.ImageRect"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.op_Explicit(C1.Win.Bitmap.ImageRect)~System.Drawing.Rectangle">
+            <summary>
+            Performs an explicit conversion from <see cref="T:C1.Win.Bitmap.ImageRect"/> to <see cref="T:System.Drawing.Rectangle"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.ImageRect.op_Explicit(System.Drawing.Rectangle)~C1.Win.Bitmap.ImageRect">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.Drawing.Rectangle"/> to <see cref="T:C1.Win.Bitmap.ImageRect"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.PaletteColor">
+            <summary>
+            Represents a color in 32bppBGRA format.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Value">
+            <summary>
+            The packed color value.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.PaletteColor"/> struct.
+            </summary>
+            <param name="argb">A packed unsigned integer containing all four color components in 32bppBGRA format.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.PaletteColor"/> struct.
+            </summary>
+            <param name="red">The red component of the color.</param>
+            <param name="green">The green component of the color.</param>
+            <param name="blue">The blue component of the color.</param>
+            <param name="alpha">The alpha component of the color.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.#ctor(C1.Util.DX.ColorF)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.PaletteColor"/> struct.
+            </summary>
+            <param name="value">The source C1.Util.DX.ColorF.</param>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.#ctor(System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.PaletteColor"/> struct.
+            </summary>
+            <param name="color">The System.Drawing.Color value.</param>
+        </member>
+        <member name="P:C1.Win.Bitmap.PaletteColor.R">
+            <summary>
+            The red component of the color.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.PaletteColor.G">
+            <summary>
+            The green component of the color.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.PaletteColor.B">
+            <summary>
+            The blue component of the color.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.PaletteColor.A">
+            <summary>
+            The alpha component of the color.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.PaletteColor.IsEmpty">
+            <summary>
+            Gets whether this ColorF structure is uninitialized.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.PaletteColor.IsTransparent">
+            <summary>
+            Gets a value indicating if we can skip drawing with this color.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.ToColorF">
+            <summary>
+            Converts the color into a C1.Util.DX.ColorF.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.ToColor">
+            <summary>
+            Converts the color into a System.Drawing.Color.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.op_Equality(C1.Win.Bitmap.PaletteColor,C1.Win.Bitmap.PaletteColor)">
+            <summary>
+            Determines if the specified values are equal.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.op_Inequality(C1.Win.Bitmap.PaletteColor,C1.Win.Bitmap.PaletteColor)">
+            <summary>
+            Determines if the specified values are not equal.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.op_Explicit(C1.Win.Bitmap.PaletteColor)~C1.Util.DX.ColorF">
+            <summary>
+            Performs an explicit conversion from <see cref="T:C1.Win.Bitmap.PaletteColor"/> to C1.Util.DX.ColorF.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.op_Explicit(C1.Win.Bitmap.PaletteColor)~System.Drawing.Color">
+            <summary>
+            Performs an explicit conversion from <see cref="T:C1.Win.Bitmap.PaletteColor"/> to <see cref="T:System.Drawing.Color"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.op_Explicit(C1.Util.DX.ColorF)~C1.Win.Bitmap.PaletteColor">
+            <summary>
+            Performs an explicit conversion from <see cref="T:C1.Util.DX.ColorF"/> to <see cref="T:C1.Win.Bitmap.PaletteColor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.op_Explicit(System.Drawing.Color)~C1.Win.Bitmap.PaletteColor">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.Drawing.Color"/> to <see cref="T:C1.Win.Bitmap.PaletteColor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.ToString(System.String)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.ToString(System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.Equals(C1.Win.Bitmap.PaletteColor)">
+            <summary>
+            Determines whether the specified <see cref="T:C1.Win.Bitmap.PaletteColor"/> is equal to this instance.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.PaletteColor.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Empty">
+            <summary>
+            Empty color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Transparent">
+            <summary>
+            Transparent color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.AliceBlue">
+            <summary>
+            AliceBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.AntiqueWhite">
+            <summary>
+            AntiqueWhite color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Aqua">
+            <summary>
+            Aqua color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Aquamarine">
+            <summary>
+            Aquamarine color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Azure">
+            <summary>
+            Azure color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Beige">
+            <summary>
+            Beige color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Bisque">
+            <summary>
+            Bisque color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Black">
+            <summary>
+            Black color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.BlanchedAlmond">
+            <summary>
+            BlanchedAlmond color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Blue">
+            <summary>
+            Blue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.BlueViolet">
+            <summary>
+            BlueViolet color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Brown">
+            <summary>
+            Brown color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.BurlyWood">
+            <summary>
+            BurlyWood color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.CadetBlue">
+            <summary>
+            CadetBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Chartreuse">
+            <summary>
+            Chartreuse color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Chocolate">
+            <summary>
+            Chocolate color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Coral">
+            <summary>
+            Coral color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.CornflowerBlue">
+            <summary>
+            CornflowerBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Cornsilk">
+            <summary>
+            Cornsilk color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Crimson">
+            <summary>
+            Crimson color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Cyan">
+            <summary>
+            Cyan color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkBlue">
+            <summary>
+            DarkBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkCyan">
+            <summary>
+            DarkCyan color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkGoldenrod">
+            <summary>
+            DarkGoldenrod color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkGray">
+            <summary>
+            DarkGray color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkGreen">
+            <summary>
+            DarkGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkKhaki">
+            <summary>
+            DarkKhaki color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkMagenta">
+            <summary>
+            DarkMagenta color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkOliveGreen">
+            <summary>
+            DarkOliveGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkOrange">
+            <summary>
+            DarkOrange color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkOrchid">
+            <summary>
+            DarkOrchid color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkRed">
+            <summary>
+            DarkRed color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkSalmon">
+            <summary>
+            DarkSalmon color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkSeaGreen">
+            <summary>
+            DarkSeaGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkSlateBlue">
+            <summary>
+            DarkSlateBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkSlateGray">
+            <summary>
+            DarkSlateGray color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkTurquoise">
+            <summary>
+            DarkTurquoise color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DarkViolet">
+            <summary>
+            DarkViolet color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DeepPink">
+            <summary>
+            DeepPink color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DeepSkyBlue">
+            <summary>
+            DeepSkyBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DimGray">
+            <summary>
+            DimGray color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.DodgerBlue">
+            <summary>
+            DodgerBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Firebrick">
+            <summary>
+            Firebrick color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.FloralWhite">
+            <summary>
+            FloralWhite color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.ForestGreen">
+            <summary>
+            ForestGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Fuchsia">
+            <summary>
+            Fuchsia color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Gainsboro">
+            <summary>
+            Gainsboro color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.GhostWhite">
+            <summary>
+            GhostWhite color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Gold">
+            <summary>
+            Gold color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Goldenrod">
+            <summary>
+            Goldenrod color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Gray">
+            <summary>
+            Gray color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Green">
+            <summary>
+            Green color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.GreenYellow">
+            <summary>
+            GreenYellow color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Honeydew">
+            <summary>
+            Honeydew color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.HotPink">
+            <summary>
+            HotPink color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.IndianRed">
+            <summary>
+            IndianRed color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Indigo">
+            <summary>
+            Indigo color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Ivory">
+            <summary>
+            Ivory color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Khaki">
+            <summary>
+            Khaki color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Lavender">
+            <summary>
+            Lavender color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LavenderBlush">
+            <summary>
+            LavenderBlush color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LawnGreen">
+            <summary>
+            LawnGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LemonChiffon">
+            <summary>
+            LemonChiffon color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightBlue">
+            <summary>
+            LightBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightCoral">
+            <summary>
+            LightCoral color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightCyan">
+            <summary>
+            LightCyan color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightGoldenrodYellow">
+            <summary>
+            LightGoldenrodYellow color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightGray">
+            <summary>
+            LightGray color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightGreen">
+            <summary>
+            LightGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightPink">
+            <summary>
+            LightPink color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightSalmon">
+            <summary>
+            LightSalmon color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightSeaGreen">
+            <summary>
+            LightSeaGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightSkyBlue">
+            <summary>
+            LightSkyBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightSlateGray">
+            <summary>
+            LightSlateGray color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightSteelBlue">
+            <summary>
+            LightSteelBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LightYellow">
+            <summary>
+            LightYellow color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Lime">
+            <summary>
+            Lime color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.LimeGreen">
+            <summary>
+            LimeGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Linen">
+            <summary>
+            Linen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Magenta">
+            <summary>
+            Magenta color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Maroon">
+            <summary>
+            Maroon color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumAquamarine">
+            <summary>
+            MediumAquamarine color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumBlue">
+            <summary>
+            MediumBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumOrchid">
+            <summary>
+            MediumOrchid color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumPurple">
+            <summary>
+            MediumPurple color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumSeaGreen">
+            <summary>
+            MediumSeaGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumSlateBlue">
+            <summary>
+            MediumSlateBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumSpringGreen">
+            <summary>
+            MediumSpringGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumTurquoise">
+            <summary>
+            MediumTurquoise color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MediumVioletRed">
+            <summary>
+            MediumVioletRed color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MidnightBlue">
+            <summary>
+            MidnightBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MintCream">
+            <summary>
+            MintCream color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.MistyRose">
+            <summary>
+            MistyRose color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Moccasin">
+            <summary>
+            Moccasin color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.NavajoWhite">
+            <summary>
+            NavajoWhite color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Navy">
+            <summary>
+            Navy color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.OldLace">
+            <summary>
+            OldLace color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Olive">
+            <summary>
+            Olive color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.OliveDrab">
+            <summary>
+            OliveDrab color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Orange">
+            <summary>
+            Orange color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.OrangeRed">
+            <summary>
+            OrangeRed color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Orchid">
+            <summary>
+            Orchid color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.PaleGoldenrod">
+            <summary>
+            PaleGoldenrod color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.PaleGreen">
+            <summary>
+            PaleGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.PaleTurquoise">
+            <summary>
+            PaleTurquoise color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.PaleVioletRed">
+            <summary>
+            PaleVioletRed color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.PapayaWhip">
+            <summary>
+            PapayaWhip color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.PeachPuff">
+            <summary>
+            PeachPuff color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Peru">
+            <summary>
+            Peru color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Pink">
+            <summary>
+            Pink color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Plum">
+            <summary>
+            Plum color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.PowderBlue">
+            <summary>
+            PowderBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Purple">
+            <summary>
+            Purple color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Red">
+            <summary>
+            Red color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.RosyBrown">
+            <summary>
+            RosyBrown color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.RoyalBlue">
+            <summary>
+            RoyalBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SaddleBrown">
+            <summary>
+            SaddleBrown color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Salmon">
+            <summary>
+            Salmon color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SandyBrown">
+            <summary>
+            SandyBrown color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SeaGreen">
+            <summary>
+            SeaGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SeaShell">
+            <summary>
+            SeaShell color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Sienna">
+            <summary>
+            Sienna color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Silver">
+            <summary>
+            Silver color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SkyBlue">
+            <summary>
+            SkyBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SlateBlue">
+            <summary>
+            SlateBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SlateGray">
+            <summary>
+            SlateGray color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Snow">
+            <summary>
+            Snow color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SpringGreen">
+            <summary>
+            SpringGreen color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.SteelBlue">
+            <summary>
+            SteelBlue color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Tan">
+            <summary>
+            Tan color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Teal">
+            <summary>
+            Teal color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Thistle">
+            <summary>
+            Thistle color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Tomato">
+            <summary>
+            Tomato color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Turquoise">
+            <summary>
+            Turquoise color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Violet">
+            <summary>
+            Violet color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Wheat">
+            <summary>
+            Wheat color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.White">
+            <summary>
+            White color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.WhiteSmoke">
+            <summary>
+            WhiteSmoke color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.Yellow">
+            <summary>
+            Yellow color.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Bitmap.PaletteColor.YellowGreen">
+            <summary>
+            YellowGreen color.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.BaseOptions">
+            <summary>
+            Base class for all encoder options.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.BaseOptions.SourceRect">
+            <summary>
+            Specifies the source rectangle for encoding.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.BmpOptions">
+            <summary>
+            Encoder options supported by the native BMP codec.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.BmpOptions.EnableV5Header32bppBGRA">
+            <summary>
+            Specifies whether the BMP should be written using the BITMAPV5HEADER with valid alpha channel content.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="T:C1.Win.Bitmap.GifOptions">
+            <summary>
+            Encoder options supported by the native GIF codec.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.JpegOptions">
+            <summary>
+            Encoder options supported by the native JPEG codec.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegOptions.ImageQuality">
+            <summary>
+            Specifies the desired image fidelity. 0.0 indicates the lowest possible fidelity and 1.0 specifies the highest fidelity.
+            </summary>
+            <remarks>
+            The default value is 0.9.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegOptions.TransformOptions">
+            <summary>
+            Specifies whether the image is rotated or flipped when decoded.
+            </summary>
+            <remarks>
+            The default value is Rotate0.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegOptions.SuppressApp0">
+            <summary>
+            Specifies whether to suppress the write of App0 metadata while encoding the image data.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="T:C1.Win.Bitmap.JpegXROptions">
+            <summary>
+            Encoder options supported by the native JPEG XR codec.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.AlphaDataDiscard">
+            <summary>
+            Sets the amount of alpha frequency data to discard during a compressed domain transcode.
+            </summary>
+            <remarks>
+            The default value is None.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.AlphaQuality">
+            <summary>
+            Sets the compression quality for the planar alpha channel image.
+            </summary>
+            <remarks>
+            The default value is 1.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.TransformOptions">
+            <summary>
+            Specifies whether the image is rotated or flipped when decoded.
+            </summary>
+            <remarks>
+            The default value is Rotate0.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.CompressedDomainTranscode">
+            <summary>
+            Enables or disables compressed domain transcoding.
+            </summary>
+            <remarks>
+            The default value is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.FrequencyOrder">
+            <summary>
+            Enables encoding in frequency order.
+            </summary>
+            <remarks>
+            The default value is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.HorizontalTileSlices">
+            <summary>
+            Sets the number of horizontal tiles.
+            </summary>
+            <remarks>
+            The default value is (image width – 1) >> 8.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.IgnoreOverlap">
+            <summary>
+            Specifies how the encoder handles tile boundaries during a compressed domain transcode.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.ImageDataDiscard">
+            <summary>
+            Sets the amount of image frequency data to discard during a compressed domain transcode.
+            </summary>
+            <remarks>
+            The default value is 0.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.ImageQuality">
+            <summary>
+            Sets the image quality.
+            </summary>
+            <remarks>
+            The default value is 0.9.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.InterleavedAlpha">
+            <summary>
+            Specifies whether to encode interleaved alpha or planar alpha.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.Lossless">
+            <summary>
+            Enables losses compression.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.Overlap">
+            <summary>
+            Sets the level of overlap filtering.
+            </summary>
+            <remarks>
+            The default value is 1.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.ProgressiveMode">
+            <summary>
+            Enables or disables progressive encoding.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.Quality">
+            <summary>
+            Sets the compression quality.
+            </summary>
+            <remarks>
+            The default value is 1.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.StreamOnly">
+            <summary>
+            Enables or disables stream-only mode.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.Subsampling">
+            <summary>
+            Sets the chroma subsampling. This property applies only to RGB images.
+            </summary>
+            <remarks>
+            The default value is 3 if ImageQuality > 0.8; otherwise 1.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.UseCodecOptions">
+            <summary>
+            Specifies whether to use the Quality, Overlap, and Subsampling properties instead of the generic ImageQuality property.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.JpegXROptions.VerticalTileSlices">
+            <summary>
+            Sets the number of vertical tiles.
+            </summary>
+            <remarks>
+            The default value is (image height – 1) >> 8.
+            </remarks>
+        </member>
+        <member name="T:C1.Win.Bitmap.PngOptions">
+            <summary>
+            Encoder options supported by the native PNG codec.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.PngOptions.Interlace">
+            <summary>
+            Specifies whether to encode the image data as interlaced.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Win.Bitmap.PngOptions.Filter">
+            <summary>
+            Specifies the filter option to use for image compression.
+            </summary>
+            <remarks>
+            The default value is PngFilter.Unspecified.
+            </remarks>
+        </member>
+        <member name="T:C1.Win.Bitmap.TiffOptions">
+            <summary>
+            Encoder options supported by the native TIFF codec.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.TiffOptions.CompressionQuality">
+            <summary>
+            Specifies the desired compression quality. A value of 1.0 specifies the most efficient compression schema available.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.TiffOptions.TIFFCompressionMethod">
+            <summary>
+            Specifies the TIFF compression method.
+            </summary>
+            <remarks>
+            The default value is DontCare.
+            </remarks>
+        </member>
+        <member name="T:C1.Win.Bitmap.BaseTransform">
+            <summary>
+            Base class for all bitmap transformations.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.Clipper">
+            <summary>
+            Produces a clipped version of the bitmap for a specified rectangular region of interest.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.Clipper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.Clipper"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.Clipper.#ctor(C1.Win.Bitmap.ImageRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.Clipper"/> class.
+            </summary>
+            <param name="imageRect">The rectangle of the bitmap to clip.</param>
+        </member>
+        <member name="P:C1.Win.Bitmap.Clipper.ImageRect">
+            <summary>
+            Gets or sets the rectangle of the bitmap to clip.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.FlipRotator">
+            <summary>
+            Produces a flipped (horizontal or vertical) and/or rotated (by 90 degree increments) bitmap. Rotations are done before the flip.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.FlipRotator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.FlipRotator"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.FlipRotator.#ctor(C1.Win.Bitmap.TransformOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.FlipRotator"/> class.
+            </summary>
+            <param name="transformOptions">The transform options to flip or rotate the image.</param>
+        </member>
+        <member name="P:C1.Win.Bitmap.FlipRotator.TransformOptions">
+            <summary>
+            Gets or sets the transform options to flip or rotate the image.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.FormatConverter">
+            <summary>
+            Converts the image data from one pixel format to another.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.FormatConverter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.FormatConverter"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.FormatConverter.#ctor(C1.Win.Bitmap.PixelFormat)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.FormatConverter"/> class.
+            </summary>
+            <param name="destinationFormat">The destination pixel format.</param>
+        </member>
+        <member name="P:C1.Win.Bitmap.FormatConverter.DestinationFormat">
+            <summary>
+            Gets or sets the destination pixel format.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.FormatConverter.DitherType">
+            <summary>
+            Gets or sets the type of dither algorithm used for conversion.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.FormatConverter.Palette">
+            <summary>
+            Gets or sets the palette to use for conversion.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.FormatConverter.AlphaThresholdPercent">
+            <summary>
+            Gets or sets the alpha threshold to use for conversion.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.FormatConverter.PaletteTranslate">
+            <summary>
+            Gets or sets the palette translation type to use for conversion.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Bitmap.Scaler">
+            <summary>
+            Represents a resized version of the input bitmap using a resampling or filtering algorithm.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.Scaler.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.Scaler"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Bitmap.Scaler.#ctor(System.Int32,System.Int32,C1.Win.Bitmap.InterpolationMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Bitmap.Scaler"/> class.
+            </summary>
+            <param name="destinationWidth">The destination width.</param>
+            <param name="destinationHeight">The desination height.</param>
+            <param name="interpolationMode">The interpolation mode to use when scaling.</param>
+        </member>
+        <member name="P:C1.Win.Bitmap.Scaler.DestinationWidth">
+            <summary>
+            Gets or sets the destination width, in pixels.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.Scaler.DestinationHeight">
+            <summary>
+            Gets or sets the destination height, in pixels.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Bitmap.Scaler.InterpolationMode">
+            <summary>
+            Gets or sets the interpolation mode to use when scaling.
+            </summary>
+        </member>
+    </members>
+</doc>

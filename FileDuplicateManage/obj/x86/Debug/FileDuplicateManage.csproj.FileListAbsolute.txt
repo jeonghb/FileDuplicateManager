@@ -1,0 +1,186 @@
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.4.dll
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.dll
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.dll
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.dll
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.xml
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.xml
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.xml
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csprojResolveAssemblyReference.cache
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.Cache
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+c:\users\uplex\documents\visual studio 2015\Projects\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csprojResolveAssemblyReference.cache
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.Cache
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmExtentionFilter.resources
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csprojResolveAssemblyReference.cache
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmExtentionFilter.resources
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.Cache
+C:\Users\uplex\Desktop\FileDuplicateManage_210510\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+C:\Users\uplex\Desktop\FileDuplicateManage\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.ResolveComReference.cache
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.ResolveComReference.cache
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csprojResolveAssemblyReference.cache
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.Cache
+C:\Users\uplex\Desktop\FileDuplicateManage2.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.ResolveComReference.cache
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.C1Excel.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.C1Zip.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.Bitmap.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\ObjectListView.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1DX.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.dll
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.C1Excel.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.C1Zip.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.Bitmap.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1DX.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.xml
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csprojResolveAssemblyReference.cache
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmConditionManage.resources
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.Cache
+C:\Users\uplex\Desktop\FileDuplicateManage3.0\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.ResolveComReference.cache
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.C1Excel.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.C1Zip.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.Bitmap.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\ObjectListView.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.C1DX.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.dll
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.C1Excel.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.C1Zip.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.Bitmap.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.C1DX.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.xml
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csprojResolveAssemblyReference.cache
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmConditionManage.resources
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.Cache
+C:\Users\ashta\Desktop\파일검색엔진\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+C:\Users\ashta\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\ashta\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.ResolveComReference.cache
+C:\Users\ashta\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\ashta\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.ResolveComReference.cache
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.C1Excel.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.C1Zip.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.Bitmap.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\ObjectListView.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.C1DX.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.dll
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.C1Excel.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.C1Zip.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.Bitmap.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Input.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.Input.MultiSelect.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.TreeView.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.C1DX.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\bin\x86\Debug\C1.Win.C1Command.4.xml
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csprojResolveAssemblyReference.cache
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmConditionManage.resources
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.Cache
+C:\Users\uplex\Desktop\파일검색엔진_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe.config
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.exe
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\bin\x86\Debug\FileDuplicateManage.pdb
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\bin\x86\Debug\ObjectListView.dll
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.AssemblyReference.cache
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.ResolveComReference.cache
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.frmFileDuplicateManage.resources
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.Properties.Resources.resources
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.GenerateResource.cache
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe.licenses
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.csproj.CoreCompileInputs.cache
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.exe
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDuplicateManage.pdb
+C:\Users\ashta\OneDrive\바탕 화면\파일검색엔진_source_3.02\FileDuplicateManage\obj\x86\Debug\FileDupl.7FC78DFB.Up2Date
